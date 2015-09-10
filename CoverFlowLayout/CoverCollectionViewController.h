@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CoverCollectionViewController.h
 //  CoverFlowLayout
 //
 //  Created by Alp Eren Can on 10/09/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CoverCollectionViewController : UICollectionViewController
 
 @end
-
