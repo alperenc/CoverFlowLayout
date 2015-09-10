@@ -7,14 +7,18 @@
 //
 
 #import "CoverCollectionViewController.h"
+#import "PhotoCollectionViewCell.h"
+#import "Photo.h"
 
 @interface CoverCollectionViewController ()
+
+@property (nonatomic, strong) NSArray *photos;
 
 @end
 
 @implementation CoverCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"photoCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +27,19 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    
+    self.photos = @[
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0241.jpg"] location:@"Istanbul" subject:@"Sunbathing"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0247.jpg"] location:@"Istanbul" subject:@"Picnic"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0256.jpg"] location:@"Istanbul" subject:@"Hiking"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0436.jpg"] location:@"Vancouver" subject:@"Picnic"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0438.jpg"] location:@"Vancouver" subject:@"Picnic"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0449.jpg"] location:@"Vancouver" subject:@"Seaside"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0456.jpg"] location:@"Vancouver" subject:@"Hiking"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0464.jpg"] location:@"Los Angeles" subject:@"Sunbathing"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0465.jpg"] location:@"Los Angeles" subject:@"Sunbathing"],
+                    [Photo photoWithImage:[UIImage imageNamed:@"O14A0468.jpg"] location:@"Los Angeles" subject:@"Picnic"]];
     
     // Do any additional setup after loading the view.
 }
@@ -46,20 +62,22 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return self.photos.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    Photo *photo = self.photos[indexPath.row];
     
     // Configure the cell
+//    cell.backgroundColor = [UIColor redColor];
+    cell.imageView.image = photo.image;
     
     return cell;
 }

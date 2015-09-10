@@ -14,6 +14,8 @@
 		C76F54BC1BA220A70099E27E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76F54BA1BA220A70099E27E /* LaunchScreen.storyboard */; };
 		C76F54C51BA221390099E27E /* CoverCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F54C41BA221390099E27E /* CoverCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C76F54C81BA2229B0099E27E /* CoverFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F54C71BA2229B0099E27E /* CoverFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		C76F54CB1BA223400099E27E /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F54CA1BA223400099E27E /* Photo.m */; settings = {ASSET_TAGS = (); }; };
+		C76F54CE1BA2236F0099E27E /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C76F54CD1BA2236F0099E27E /* PhotoCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		C76F54C41BA221390099E27E /* CoverCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverCollectionViewController.m; sourceTree = "<group>"; };
 		C76F54C61BA2229B0099E27E /* CoverFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowLayout.h; sourceTree = "<group>"; };
 		C76F54C71BA2229B0099E27E /* CoverFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowLayout.m; sourceTree = "<group>"; };
+		C76F54C91BA223400099E27E /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		C76F54CA1BA223400099E27E /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		C76F54CC1BA2236F0099E27E /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		C76F54CD1BA2236F0099E27E /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,10 +69,14 @@
 			children = (
 				C76F54AF1BA220A70099E27E /* AppDelegate.h */,
 				C76F54B01BA220A70099E27E /* AppDelegate.m */,
+				C76F54C91BA223400099E27E /* Photo.h */,
+				C76F54CA1BA223400099E27E /* Photo.m */,
 				C76F54C31BA221390099E27E /* CoverCollectionViewController.h */,
 				C76F54C41BA221390099E27E /* CoverCollectionViewController.m */,
 				C76F54C61BA2229B0099E27E /* CoverFlowLayout.h */,
 				C76F54C71BA2229B0099E27E /* CoverFlowLayout.m */,
+				C76F54CC1BA2236F0099E27E /* PhotoCollectionViewCell.h */,
+				C76F54CD1BA2236F0099E27E /* PhotoCollectionViewCell.m */,
 				C76F54B51BA220A70099E27E /* Main.storyboard */,
 				C76F54B81BA220A70099E27E /* Assets.xcassets */,
 				C76F54BA1BA220A70099E27E /* LaunchScreen.storyboard */,
@@ -155,8 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76F54C51BA221390099E27E /* CoverCollectionViewController.m in Sources */,
+				C76F54CE1BA2236F0099E27E /* PhotoCollectionViewCell.m in Sources */,
 				C76F54C81BA2229B0099E27E /* CoverFlowLayout.m in Sources */,
 				C76F54B11BA220A70099E27E /* AppDelegate.m in Sources */,
+				C76F54CB1BA223400099E27E /* Photo.m in Sources */,
 				C76F54AE1BA220A70099E27E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

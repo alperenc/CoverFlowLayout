@@ -12,24 +12,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xk8-it-Yqp" customClass="CoverFlowLayout">
-                            <size key="itemSize" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="20" id="K24-37-vFb" customClass="CoverFlowLayout">
+                            <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1bp-cr-Uea">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="photoCell" id="1bp-cr-Uea" customClass="PhotoCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="O14A0241" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-KC-Eim">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.63928649479999999" blue="0.5033052885" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EV8-KC-Eim" secondAttribute="trailing" id="CBH-TT-7V7"/>
+                                    <constraint firstItem="EV8-KC-Eim" firstAttribute="leading" secondItem="1bp-cr-Uea" secondAttribute="leading" id="l6i-CQ-DI5"/>
+                                    <constraint firstItem="EV8-KC-Eim" firstAttribute="top" secondItem="1bp-cr-Uea" secondAttribute="top" id="lYT-pD-0JW"/>
+                                    <constraint firstAttribute="bottom" secondItem="EV8-KC-Eim" secondAttribute="bottom" id="qLc-Em-Xv7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="EV8-KC-Eim" id="GjS-UO-sJG"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -43,4 +59,7 @@
             <point key="canvasLocation" x="350" y="448"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="O14A0241" width="3707" height="5560"/>
+    </resources>
 </document>
